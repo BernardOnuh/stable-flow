@@ -14,6 +14,9 @@ const Header = () => {
   });
   const router = useRouter();
 
+  // External link to Postman workspace
+  const POSTMAN_WORKSPACE_URL = 'https://web3nova.postman.co/workspace/LIQUIDITY~20697ae5-fb2f-4cee-9b4c-6d820595914f/request/29992378-acf26692-6bab-4be1-a399-c4130c2420ab?action=share&creator=29992378&ctx=documentation';
+
   // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +93,7 @@ const Header = () => {
               {/* Developers Dropdown */}
               <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="p-6 space-y-4">
-                  <Link href="/docs" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
+                  <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -100,9 +103,9 @@ const Header = () => {
                       <h3 className="font-semibold text-gray-900 group-hover/item:text-black transition-colors">Documentation</h3>
                       <p className="text-sm text-gray-600 mt-1">Learn how to integrate Stable Flow AI agent.</p>
                     </div>
-                  </Link>
+                  </a>
                   
-                  <Link href="/api" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
+                  <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -112,9 +115,9 @@ const Header = () => {
                       <h3 className="font-semibold text-gray-900 group-hover/item:text-black transition-colors">API Reference</h3>
                       <p className="text-sm text-gray-600 mt-1">Complete API specs for liquidity management.</p>
                     </div>
-                  </Link>
+                  </a>
                   
-                  <Link href="/status" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
+                  <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 group/item">
                     <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mt-0.5">
                       <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -124,7 +127,7 @@ const Header = () => {
                       <h3 className="font-semibold text-gray-900 group-hover/item:text-black transition-colors">Status Page</h3>
                       <p className="text-sm text-gray-600 mt-1">Real-time cross-chain network status.</p>
                     </div>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -313,7 +316,7 @@ const Header = () => {
                     mobileDropdowns.developers ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'
                   }`}>
                     <div className="pl-4 space-y-2">
-                      <Link href="/docs" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
@@ -321,9 +324,9 @@ const Header = () => {
                           <div className="font-medium text-gray-900">Documentation</div>
                           <div className="text-sm text-gray-600">Integration guides</div>
                         </div>
-                      </Link>
+                      </a>
                       
-                      <Link href="/api" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
@@ -331,9 +334,9 @@ const Header = () => {
                           <div className="font-medium text-gray-900">API Reference</div>
                           <div className="text-sm text-gray-600">Complete API specs</div>
                         </div>
-                      </Link>
+                      </a>
                       
-                      <Link href="/status" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
+                      <a href={POSTMAN_WORKSPACE_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-gray-50 transition-all duration-200" onClick={() => setIsMobileMenuOpen(false)}>
                         <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
@@ -341,7 +344,7 @@ const Header = () => {
                           <div className="font-medium text-gray-900">Status Page</div>
                           <div className="text-sm text-gray-600">Network status</div>
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
