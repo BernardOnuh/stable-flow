@@ -7,6 +7,7 @@ export default function Home() {
     <div className="bg-white text-white min-h-screen">
       <Header />
       <Hero />
+    
     </div>
   );
 }
